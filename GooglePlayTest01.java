@@ -129,9 +129,5 @@ public class GooglePlayTest01
         googlePlay.addProducto(pelicula2);        
         assertEquals(8, googlePlay.getNumeroProductos());                 
     }
-    
-    
-    
-    
-        
+   
 }

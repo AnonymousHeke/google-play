@@ -10,6 +10,7 @@ public class Libro extends ProductoMultimedia
     // instance variables - replace the example below with your own
     private int numeroPaginas;
     private boolean ficcion;
+    private double precio;
 
     /**
      * Constructor for objects of class Libro
@@ -19,6 +20,7 @@ public class Libro extends ProductoMultimedia
         super(nombreLibro, annoPublicacion);
         this.numeroPaginas = numeroPaginas;
         this.ficcion = ficcion;
+        precio = (numeroPaginas/100)*(annoPublicacion-2010);
     }
 
     public int getNumeroPaginas()
@@ -30,4 +32,9 @@ public class Libro extends ProductoMultimedia
     {
         return ficcion;
     }
+    
+    public double getPrecioProducto()
+    {
+        return precio;
+    }    
 }

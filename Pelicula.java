@@ -10,6 +10,7 @@ public class Pelicula extends ProductoMultimedia
     // instance variables - replace the example below with your own
     private int duracion;
     private int calidad;
+    private double precio;
 
     /**
      * Constructor for objects of class Pelicula
@@ -19,6 +20,7 @@ public class Pelicula extends ProductoMultimedia
         super(nombrePelicula, annoCreacion);
         this.duracion = duracion;
         this.calidad = calidad;
+        precio = 0;
     }
 
     public int getDuracion()
@@ -40,5 +42,10 @@ public class Pelicula extends ProductoMultimedia
         }
         
         return tipoCalidad;
+    }
+    
+    public double getPrecioProducto()
+    {
+        return precio;
     }
 }

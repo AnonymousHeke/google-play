@@ -10,6 +10,7 @@ public class Aplicacion extends Producto
     // instance variables - replace the example below with your own
     private Categoria categoria;
     private double tamanno;
+    private double precio;
 
     /**
      * Constructor for objects of class Aplicacion
@@ -19,11 +20,12 @@ public class Aplicacion extends Producto
         super(nombreAplicacion);
         this.tamanno = tamanno;
         this.categoria = categoria;
+        precio = 0.99;
     }
 
     public String getNombre()
     {
-        return getNombreProducto();
+        return getId();
     }
     
     public double getTamanoEnMB()
@@ -56,5 +58,20 @@ public class Aplicacion extends Producto
         }        
         
         return tipoCategoria;
-    }
+    }   
+    
+    public double getPrecioProducto()
+    {
+        switch (categoria) 
+        {
+            case JUEGOS: 
+            
+            
+        }
+            
+            
+       
+       
+        return precio;
+    }    
 }

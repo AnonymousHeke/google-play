@@ -1,20 +1,33 @@
 
-public abstract class Producto extends GooglePlay
+public abstract class Producto
 {
     // instance variables - replace the example below with your own
-    private String nombre;
-
+    private String identificador;
+    private int numeroCompras; 
+    
     /**
      * Constructor for objects of class Producto
      */
-    public Producto(String nombre)
+    public Producto(String identificador)
     {
-        this.nombre = nombre;
+        this.identificador = identificador;
+        numeroCompras = 0;
     }
     
-    protected String getNombreProducto()
+    public String getId()
     {
-        return nombre;
+        return identificador;
     }
     
+    public void addNumeroCompras()
+    {
+        numeroCompras++;
+    }
+    
+    public int numeroCompras()
+    {
+        return numeroCompras;
+    }     
+    
+    public abstract double getPrecioProducto();
 }
