@@ -20,7 +20,6 @@ public class Libro extends ProductoMultimedia
         super(nombreLibro, annoPublicacion);
         this.numeroPaginas = numeroPaginas;
         this.ficcion = ficcion;
-        precio = (numeroPaginas/100)*(annoPublicacion-2010);
     }
 
     public int getNumeroPaginas()
@@ -35,6 +34,7 @@ public class Libro extends ProductoMultimedia
     
     public double getPrecioProducto()
     {
+        precio = (getNumeroPaginas()/100)*(getAno()- 2010);
         return precio;
     }    
 }

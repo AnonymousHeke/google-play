@@ -61,17 +61,26 @@ public class Aplicacion extends Producto
     }   
     
     public double getPrecioProducto()
-    {
-        switch (categoria) 
+    {       
+        if (getNumeroCompras() >= 2)
         {
-            case JUEGOS: 
-            
-            
+            switch (categoria) 
+            {
+                case JUEGOS: 
+                precio = 5;
+                break;
+                case MULTIMEDIA:
+                precio = 2;
+                break;
+                case PRODUCTIVIDAD:
+                precio = 10;
+                break;
+                case COMUNICACIONES:
+                precio = 2;
+                break;
+            }
         }
-            
-            
-       
-       
+                                     
         return precio;
     }    
 }

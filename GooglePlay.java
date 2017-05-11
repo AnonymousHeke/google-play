@@ -56,21 +56,22 @@ public class GooglePlay
             {
                 usuarioEncontrado = true;
                 usuario = usuarios.get(i);
+                i = 0;
+                while (i < productos.size() && productoEncontrado == false && usuarioEncontrado)
+                {
+                    if(productos.get(i).getId().equals(productoAComprar))
+                    {
+                        productoEncontrado = true;
+                        producto = productos.get(i);
+                        precioProducto = producto.getPrecioProducto();
+                        producto.addNumeroCompras();
+                        usuario.addProductoComprado(producto);
+                    }
+                    i++;
+                }
             }
-        }
-        
-        i = 0;
-        
-        while (i < productos.size() && productoEncontrado == false)
-        {
-            if(productos.get(i).getId().equals(productoAComprar) && usuarioEncontrado)
-            {
-                producto = productos.get(i);
-                precioProducto = productogetPrecioProducto();
-                producto.addNumeroCompras();
-                usuario.addProductoComprado(producto);
-            }
-        }
+            i++;
+        }        
         
         return precioProducto;
     }

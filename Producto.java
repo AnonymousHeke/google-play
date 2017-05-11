@@ -24,7 +24,7 @@ public abstract class Producto
         numeroCompras++;
     }
     
-    public int numeroCompras()
+    public int getNumeroCompras()
     {
         return numeroCompras;
     }     
